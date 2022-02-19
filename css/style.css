@@ -40,10 +40,23 @@ ul {
 }
 
 .button {
-    cursor: pointer;
+
+    min-width: 200px;
+    max-width: 350px;
+    padding: 10px 32px;
+
     font-family: var(--main-font-style);
-    
-    border: none;
+    font-weight: 700;
+    font-size: var(--font-size-medium);
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+    color: var(--primary-white-color);
+
+    cursor: pointer;
+    background-color: var(--accent-color);
+    border:none;
+    border-radius: 4px;
+
 }
 
 img {
@@ -142,6 +155,8 @@ img {
     align-items: center;
 
     color: var(--primary-text-color);
+
+    transition: color var(--duration) var(--timing-function);
 }
 
 .nav-link{
@@ -232,8 +247,9 @@ img {
 }
 
 
-.intro-btn {
+/* .intro-btn {
     min-width: 200px;
+    max-width: 350px;
     padding: 10px 32px;
 
     font-weight: 700;
@@ -245,7 +261,7 @@ img {
     background-color: var(--accent-color);
     border:none;
     border-radius: 4px;
-}
+} */
 
 /* Features */
 
@@ -444,13 +460,13 @@ img {
 }
 
 .adress-wrapper {
-    margin-right: 70px;
+    margin-right: 85px;
 }
   
 .join-wrapper {
     padding-top: 12px;
-    margin-right: 93px;
 }
+
 .join-header {
     margin-bottom: 20px;
 }
@@ -549,6 +565,8 @@ img {
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     cursor: pointer;
+
+    transition: border-color var(--duration) var(--timing-function);
 }
 
 .customers-link {
@@ -712,7 +730,9 @@ margin-right: 8px;
 }
 
 .subscribe-form {
-padding-top: 12px;
+    padding-top: 12px;
+    margin-left: auto;
+
 }
 
 .subscribe-header {
@@ -753,19 +773,7 @@ padding-top: 12px;
     justify-content: center;
     padding: 10px 28px 10px 29px;
 
-    font-weight: 700;
-    font-size: var(--font-size-medium);
-    line-height: 1.62;
-    text-align: center;
-    letter-spacing: 0.06em;
-
-    color: var(--primary-white-color);
-
-    background: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    border-color: transparent;
-    cursor: pointer;
 }
 
  .subscribe-btn span {
@@ -794,7 +802,6 @@ padding-top: 12px;
     position: relative;
 
     width: 528px;
-    height: 581px;
     padding: 40px;
 
     background-color: var(--primary-white-color);
@@ -822,11 +829,14 @@ padding-top: 12px;
 
 .modal-svg {
     fill: var(--secondary-black-color);
+
+    transition: fill var(--duration) var(--timing-function);
 }
+
 .modal-btn:hover .modal-svg,
 .modal-btn:focus .modal-svg{
     fill: var(--accent-color);
-    transition: fill var(--duration) var(--timing-function);
+    
 }
 
 .is-hidden {
@@ -858,10 +868,11 @@ padding-top: 12px;
 
 
 .order-label {
+    display: block;
     margin-bottom: 4px;
 
     font-size: 12px;
-    line-height: 1.5;
+    line-height: 1.16;
     letter-spacing: 0.01em;
     color: var(--primary-text-color);
 }
@@ -876,6 +887,8 @@ padding-top: 12px;
 
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+
+    transition: outline var(--duration) var(--timing-function),border-color var(--duration) var(--timing-function);
 }
 
 .order-svg {
@@ -891,11 +904,11 @@ padding-top: 12px;
 .order-message:focus {
     border-color: var(--accent-color);
     outline: var(--accent-color);
-    transition: outline var(--duration) var(--timing-function),border-color var(--duration) var(--timing-function);
 }
 
 .order-input:focus + .order-svg {
     fill: var(--accent-color);
+    
     transition: fill var(--duration) var(--timing-function);
 }
 
@@ -907,10 +920,12 @@ padding-top: 12px;
 
     line-height: 1.14;
     letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
+    color: var(--title-text-color);
 
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+
+    transition: outline var(--duration) var(--timing-function),border-color var(--duration) var(--timing-function);
 }
 
 .policy-text {
@@ -952,7 +967,6 @@ padding-top: 12px;
 }
 
 .order-checkbox:checked + .checkbox-icon {
-    border-color: var(--accent-color);
     background-color: var(--accent-color);
     background-image: url(../images/svg/icon-check.svg);
     background-size: contain;
@@ -963,18 +977,7 @@ padding-top: 12px;
 .order-btn {
     display: block;
     margin: 0 auto;
-    padding: 10px 55px 10px 56px;
+    padding: 10px 55px;
 
-    font-weight: 700;
-    font-size: var(--font-size-medium);
-    line-height: 1.63;
-    letter-spacing: 0.06em;
-    color: var(--primary-white-color);
-
-    background-color: var(--accent-color);
-    border-color: transparent;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    cursor: pointer;
-
 }
